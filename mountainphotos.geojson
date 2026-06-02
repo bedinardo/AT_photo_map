@@ -1,0 +1,170 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4201.jpeg",
+        "caption": "IMG_4201.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.17353055555556,
+          37.36078888888889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4210.jpeg",
+        "caption": "IMG_4210.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.0373,
+          37.392963888888886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4277.jpeg",
+        "caption": "IMG_4277.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.93739444444445,
+          34.74003611111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4289.jpeg",
+        "caption": "IMG_4289.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.69319166666666,
+          34.79671388888889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4659.jpeg",
+        "caption": "IMG_4659.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.47105277777779,
+          39.81908055555556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4820.jpeg",
+        "caption": "IMG_4820.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.81873333333333,
+          43.60461388888889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4888.jpeg",
+        "caption": "IMG_4888.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.83148055555556,
+          44.023380555555555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_5049.jpeg",
+        "caption": "IMG_5049.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.303275,
+          44.27049722222222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_5124.jpeg",
+        "caption": "IMG_5124.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.5047388888889,
+          44.93648611111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_5223.jpeg",
+        "caption": "IMG_5223.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.288025,
+          45.14684722222222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_5387.jpeg",
+        "caption": "IMG_5387.jpeg",
+        "marker": "Markers/Mountain.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -68.92145555555555,
+          45.90445277777778
+        ]
+      }
+    }
+  ]
+}

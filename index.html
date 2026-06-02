@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <title>University of Oregon Mapping</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <!--    The Mapbox JavaScript here in the <head> of the page    -->
+      <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+      <!--    The Mapbox CSS here in the <head> of the page    -->
+      <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css' rel='stylesheet' />
+      <style>
+        body { margin: 0; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+          .popup-image {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+ }
+        .marker {
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .mapboxgl-popup-content {
+            text-align: center;
+            font-family: 'Arial, sans-serif';
+            border-radius: 10px;
+            padding: 15px;
+            /* box-shadow: 0 2px 10px rgba(0,0,0,0.3); */
+            background-color: #213a12c0;
+        }
+      </style>
+  </head>
+  <body>
+
+    <div id='map'></div>
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoiYmRpbmFyZG8iLCJhIjoiY21uZjdjNjg3MDdkOTJzb2p4NDB3YXgzNiJ9.blvzI6YN8c5MaPDZ4Striw';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/bdinardo/cmpn4xln6001p01sseref9rkr',
+        center: [-78, 41],
+        maxZoom: 15,
+        minZoom: 5,
+        zoom: 5
+        });
+        
+       
+        fetch('AT_photos.geojson')
+            .then(response => response.json())
+            .then(data => {
+
+                data.features.forEach(feature => {
+
+                    // Create popup
+                    const popup = new mapboxgl.Popup({
+                        maxWidth: '320px'
+                    }).setHTML(`
+                        <h3>${feature.properties.caption}</h3>
+                        <img 
+                            src="${feature.properties.image}" 
+                            class="popup-image">
+                    `);
+
+                    // Create marker element using Marker property from GeoJSON
+                    const markerElement = document.createElement('div');
+                    markerElement.className = 'marker';
+                    markerElement.style.backgroundImage = `url('${feature.properties.marker}')`;
+
+                    // Create marker
+                    new mapboxgl.Marker(markerElement)
+                        .setLngLat(feature.geometry.coordinates)
+                        .setPopup(popup)
+                        .addTo(map);
+
+                });
+
+            });
+
+    </script>
+    </body>
+</html>

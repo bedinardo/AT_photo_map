@@ -1,0 +1,185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_3192.jpeg",
+        "caption": "IMG_3192.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.9584888888889,
+          43.30730833333333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_3851.jpeg",
+        "caption": "IMG_3851.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.5205388888889,
+          35.56536944444444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_3931.jpeg",
+        "caption": "IMG_3931.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.49017222222223,
+          35.98976944444445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4254.jpeg",
+        "caption": "IMG_4254.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.24931388888889,
+          34.55772777777778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4482.jpeg",
+        "caption": "IMG_4482.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.66036111111111,
+          40.28829444444444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4549.jpeg",
+        "caption": "IMG_4549.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.39103055555556,
+          37.596536111111114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4619.jpeg",
+        "caption": "IMG_4619.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.95294166666667,
+          39.15980833333333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4637.jpeg",
+        "caption": "IMG_4637.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.74059166666667,
+          39.32564444444445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4730.jpeg",
+        "caption": "IMG_4730.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.16719722222223,
+          41.29470555555555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4736.jpeg",
+        "caption": "IMG_4736.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.61189166666666,
+          41.60261111111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_5002.jpeg",
+        "caption": "IMG_5002.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.33702777777778,
+          44.247527777777776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_5247.jpeg",
+        "caption": "IMG_5247.jpeg",
+        "marker": "Markers/Hiker.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.00223611111112,
+          45.235644444444446
+        ]
+      }
+    }
+  ]
+}

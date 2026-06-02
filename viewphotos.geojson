@@ -1,0 +1,185 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_3841.jpeg",
+        "caption": "IMG_3841.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.56617777777778,
+          35.56477222222222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_3853.jpeg",
+        "caption": "IMG_3853.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.51855555555555,
+          35.56386111111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4204.jpeg",
+        "caption": "IMG_4204.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -80.13453611111112,
+          37.35673055555556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4221.jpeg",
+        "caption": "IMG_4221.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.93545555555556,
+          37.40428611111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4228.jpeg",
+        "caption": "IMG_4228.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -79.74926111111111,
+          37.43136111111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4322.jpeg",
+        "caption": "IMG_4322.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.74096666666667,
+          39.31977777777778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4518.jpeg",
+        "caption": "IMG_4518.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.60431666666666,
+          40.787280555555554
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4533.jpeg",
+        "caption": "IMG_4533.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.04245,
+          41.01493055555556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4546.jpeg",
+        "caption": "IMG_4546.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.6644888888889,
+          41.31678333333333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4611.jpeg",
+        "caption": "IMG_4611.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.987975,
+          41.32005555555556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4784.jpeg",
+        "caption": "IMG_4784.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.40967500000001,
+          42.01333611111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4844.jpeg",
+        "caption": "IMG_4844.jpeg",
+        "marker": "Markers/View.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.15754722222223,
+          35.76198333333333
+        ]
+      }
+    }
+  ]
+}

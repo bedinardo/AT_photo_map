@@ -1,0 +1,260 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_3723.jpeg",
+        "caption": "IMG_3723.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.47783611111112,
+          35.05565555555555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_3810.jpeg",
+        "caption": "IMG_3810.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.80844166666667,
+          35.452825000000004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_3866.jpeg",
+        "caption": "IMG_3866.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.49869444444444,
+          35.562875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_3992.jpeg",
+        "caption": "IMG_3992.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.0114138888889,
+          36.151916666666665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4093.jpeg",
+        "caption": "IMG_4093.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.53258611111112,
+          36.65475555555555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4115.jpeg",
+        "caption": "IMG_4115.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.37520555555555,
+          36.91233888888889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4129.jpeg",
+        "caption": "IMG_4129.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -81.017075,
+          37.14741111111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4270.jpeg",
+        "caption": "IMG_4270.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -78.62815833333333,
+          38.30108611111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4308.jpeg",
+        "caption": "IMG_4308.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.90340555555557,
+          39.07011666666667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4394.jpeg",
+        "caption": "IMG_4394.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -77.36682222222221,
+          40.028888888888886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4405.jpeg",
+        "caption": "IMG_4405.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -82.81063055555555,
+          36.16478611111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4488.jpeg",
+        "caption": "IMG_4488.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -76.29798055555555,
+          40.509975
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4566.jpeg",
+        "caption": "IMG_4566.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.34403888888889,
+          41.19168611111111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4820.jpeg",
+        "caption": "IMG_4820.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.15555555555557,
+          42.74383888888889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_4876.jpeg",
+        "caption": "IMG_4876.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -72.29998055555555,
+          43.703747222222226
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_5100.jpeg",
+        "caption": "IMG_5100.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0215,
+          44.48504166666667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "photos/IMG_5134.jpeg",
+        "caption": "IMG_5134.jpeg",
+        "marker": "Markers/Sign.svg"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -70.384225,
+          45.05116944444444
+        ]
+      }
+    }
+  ]
+}
