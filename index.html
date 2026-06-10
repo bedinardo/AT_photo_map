@@ -315,27 +315,29 @@
         </div>
 
     <script>
-       mapboxgl.accessToken = 'pk.eyJ1IjoiYmRpbmFyZG8iLCJhIjoiY21uZjdjNjg3MDdkOTJzb2p4NDB3YXgzNiJ9.blvzI6YN8c5MaPDZ4Striw';
-     var map = new mapboxgl.Map({
-        container: 'map',
-        style: 'mapbox://styles/bdinardo/cmpn4xln6001p01sseref9rkr',
-        attributionControl: false,
-        center: [-76, 41],
-        maxZoom: 15,
-        minZoom: 5,
-        zoom: 5,
-        maxBounds: bounds
-        });
-        // Attribution 
-            map.addControl(new mapboxgl.AttributionControl({
-                customAttribution: ['Map design by Bryce DiNardo', 'All photos by Bryce DiNardo and Kasey Drake', 'CC BY-NC-ND 4.0', '<a href="Explore%20the%20Appalachian%20Trail%20Sources.pdf" target="_blank" rel="noopener">Data sources</a>']
-            }), 'bottom-right');
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYmRpbmFyZG8iLCJhIjoiY21uZjdjNjg3MDdkOTJzb2p4NDB3YXgzNiJ9.blvzI6YN8c5MaPDZ4Striw';
 
-        // Set bounds to Eastern US 
-		var bounds = [
-		    [-90.0743285401741, 29.95740994235169], // Southwest coordinates
-		    [ -63.83372092372847, 49.7683041084351] // Northeast coordinates 
-		];
+        // Set bounds to Eastern US before creating the map so maxBounds works correctly.
+        var bounds = [
+            [-90.0743285401741, 29.95740994235169], // Southwest coordinates
+            [-63.83372092372847, 49.7683041084351] // Northeast coordinates
+        ];
+
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/bdinardo/cmpn4xln6001p01sseref9rkr',
+            attributionControl: false,
+            center: [-76, 41],
+            maxZoom: 15,
+            minZoom: 5,
+            zoom: 5,
+            maxBounds: bounds
+        });
+
+        // Attribution 
+        map.addControl(new mapboxgl.AttributionControl({
+            customAttribution: ['Map design by Bryce DiNardo', 'All photos by Bryce DiNardo and Kasey Drake', 'CC BY-NC-ND 4.0', '<a href="Explore%20the%20Appalachian%20Trail%20Sources.pdf" target="_blank" rel="noopener">Data sources</a>']
+        }), 'bottom-right');
 
         // Map controls
             map.addControl(new mapboxgl.NavigationControl({
