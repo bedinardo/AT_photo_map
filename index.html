@@ -147,6 +147,7 @@
             background: #213a12c0;
             border-radius: 7px;
             transition: height 2s ease;
+            overflow: hidden;
             }
 
         .colorLegendPanelHeader {
@@ -235,7 +236,8 @@
       </style>
   </head>
   <body>
-    <!-- Creation of divs for all CSS elements -->
+
+    <!-- Divs that all the CSS is styling -->
     <div id='map'></div>
     <br/>
     <button id='fly'>Explore the Appalachian Trail</button>
@@ -249,7 +251,21 @@
                The Appalachian Trail spans nearly 2,200 miles, running across 13 states and over a hundred peaks from Georgia to Maine. On March 3rd 2021, Bryce DiNardo (Myself) and Kasey Drake set out on a semester off of a lifetime as they hiked the AT Northbound for a total of 162 days, averaging 18.5 miles a day when hiking. <br> Explore their thru-hiking journey through geotagged photos of hikers, mountaintops, trail signs, and views they captured along the way. <br> <u>Visit a few of their favorite and most iconic places by clicking <b> <i>"Explore the Appalachian Trail" </i> </b>  button at the top of the screen multiple times</u>. 
         </p>
         </div>
-        
+        <!-- SVG/photo type Legend -->
+        <div class="svgLegendContainer" id="svgLegend">
+            <input type="checkbox" id="poi-Hiker" checked>
+            <label for="poi-Hiker"><img src="Markers/Hiker.svg" alt="Hiker"><span>Hiker Photos</span></label>
+            
+            <input type="checkbox" id="poi-Mountain" checked>
+            <label for="poi-Mountain"><img src="Markers/Mountain.svg" alt="Mountain"><span>Mountain Top Photos</span></label>
+            
+            <input type="checkbox" id="poi-Sign" checked>
+            <label for="poi-Sign"><img src="Markers/Sign.svg" alt="Sign"><span>Trail or Distance Photos</span></label>
+            
+            <input type="checkbox" id="poi-View" checked>
+            <label for="poi-View"><img src="Markers/View.svg" alt="View"><span>Beautiful Scenery Photos</span></label>
+        </div>
+
         <!-- National Forests and Parks Legend -->
         <div class="colorLegendPanel" id="colorLegendPanel" style="height: auto;">
             <div class="colorLegendPanelHeader" onclick="togglePanel('colorLegendPanel', 'colorGlyph', colorLegendState, '50px', 'auto')">
@@ -298,32 +314,9 @@
             </div>
         </div>
 
-        <!-- SVG Legend -->
-        <div class="svgLegendContainer" id="svgLegend">
-            <input type="checkbox" id="poi-Hiker" checked>
-            <label for="poi-Hiker"><img src="Markers/Hiker.svg" alt="Hiker"><span>Hiker Photos</span></label>
-            
-            <input type="checkbox" id="poi-Mountain" checked>
-            <label for="poi-Mountain"><img src="Markers/Mountain.svg" alt="Mountain"><span>Mountain Top Photos</span></label>
-            
-            <input type="checkbox" id="poi-Sign" checked>
-            <label for="poi-Sign"><img src="Markers/Sign.svg" alt="Sign"><span>Trail or Distance Photos</span></label>
-            
-            <input type="checkbox" id="poi-View" checked>
-            <label for="poi-View"><img src="Markers/View.svg" alt="View"><span>Beautiful Scenery Photos</span></label>
-        </div>
-
-
     <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYmRpbmFyZG8iLCJhIjoiY21uZjdjNjg3MDdkOTJzb2p4NDB3YXgzNiJ9.blvzI6YN8c5MaPDZ4Striw';
-    
-    // Set bounds to Eastern US 
-		var bounds = [
-		    [-90.0743285401741, 29.95740994235169], // Southwest coordinates
-		    [ -63.83372092372847, 49.7683041084351] // Northeast coordinates 
-		];
-        // Initialize the map with the specified style, center, zoom, and bounds
-    var map = new mapboxgl.Map({
+       mapboxgl.accessToken = 'pk.eyJ1IjoiYmRpbmFyZG8iLCJhIjoiY21uZjdjNjg3MDdkOTJzb2p4NDB3YXgzNiJ9.blvzI6YN8c5MaPDZ4Striw';
+     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/bdinardo/cmpn4xln6001p01sseref9rkr',
         attributionControl: false,
@@ -333,19 +326,40 @@
         zoom: 5,
         maxBounds: bounds
         });
-        // Attribution / custom text
+        // Attribution 
             map.addControl(new mapboxgl.AttributionControl({
                 customAttribution: ['Map design by Bryce DiNardo', 'All photos by Bryce DiNardo and Kasey Drake', 'CC BY-NC-ND 4.0', '<a href="Explore%20the%20Appalachian%20Trail%20Sources.pdf" target="_blank" rel="noopener">Data sources</a>']
             }), 'bottom-right');
-        
-            // Map controls
+
+        // Set bounds to Eastern US 
+		var bounds = [
+		    [-90.0743285401741, 29.95740994235169], // Southwest coordinates
+		    [ -63.83372092372847, 49.7683041084351] // Northeast coordinates 
+		];
+
+        // Map controls
             map.addControl(new mapboxgl.NavigationControl({
                 showCompass: true,
                 showZoom: true,
                 visualizePitch: true
             }), 'bottom-left');
+
+        /* Variables for the marker and fly-to locations*/
+        var clickCounter = 0; // keep track of the current index in the fly-to sequence
+        var flyLocations = [[-84.24931388888889,34.55772777777778],[-83.80844166666667,35.452825000000004], [-80.0373,37.392963888888886], 
+        [ -77.74059166666667,39.32564444444445], [-76.66036111111111,40.28829444444444], [-73.15555555555557,42.74383888888889], [-71.303275,44.27049722222222],
+    [-68.92145555555555, 45.90445277777778]]; // Where the map will fly to (lng, lat)
+        // Arrays to hold created markers and the subset sequence we'll fly through
+        var markers = []; // each entry: { marker, popup, coords, type }
+        var flySequence = []; // indices into `markers` matching `flyLocations` order
+        var currentOpenPopup = null; // reference to the currently opened popup (if any)
+        var markersByType = { Hiker: [], Mountain: [], Sign: [], View: [] }; // Track markers by type for toggling
+      
+      
      
-            //Code for loading the GeoJSON data and creating markers and popups for each photo point on the map.   
+      
+        
+    //    Fetch the GeoJSON data to create markers and image popups
         fetch('AT_photos.geojson')
             .then(response => response.json())
             .then(data => {
@@ -388,18 +402,8 @@
                 });
 
 
-                /* Variables for the spefic fly to markers and fly-to locations*/
-                var clickCounter = 0; // keep track of the current index in the fly-to sequence
-                var flyLocations = [[-84.24931388888889,34.55772777777778],[-83.80844166666667,35.452825000000004], [-80.0373,37.392963888888886], 
-                [ -77.74059166666667,39.32564444444445], [-76.66036111111111,40.28829444444444], [-73.15555555555557,42.74383888888889], [-71.303275,44.27049722222222],
-                [-68.92145555555555, 45.90445277777778]]; // Where the map will fly to (lng, lat)
-                // Arrays to hold created markers and the subset sequence we'll fly through
-                var markers = []; // each entry: { marker, popup, coords, type }
-                var flySequence = []; // indices into `markers` matching `flyLocations` order
-                var currentOpenPopup = null; // reference to the currently opened popup (if any)
-                var markersByType = { Hiker: [], Mountain: [], Sign: [], View: [] }; // Track markers by type for toggling
-
-                // Build the flySequence in the same order as `flyLocations` by matching coordinates to the markers we created. This allows us to fly to specific points in a defined order.
+                
+                // Build the flySequence in the same order as `flyLocations`
                 flySequence = flyLocations.map(loc => {
                     for (let i = 0; i < markers.length; i++) {
                         const c = markers[i].coords;
@@ -470,12 +474,9 @@
 
         });
 
-
-
+            
          
-            //  Interacting with the Welcome panel and the Forest/Parks legend panel.
-            //  `state` tracks whether the Welcome panel is expanded or collapsed.
-            //  `colorLegendState` tracks whether the forest legend is expanded or collapsed.
+            //  Interacting with description panel
             var state = { panelOpen: true };
             var colorLegendState = { open: true };
 
@@ -528,7 +529,7 @@
                 });
             }
 
-            // Initialize the first position for the description panel.
+            // initialize description panel position relative to the legend
             updateDescriptionPosition();
     </script>
     </body>
