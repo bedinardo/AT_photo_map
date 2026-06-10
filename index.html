@@ -3,22 +3,29 @@
 
   <head>
     <meta charset='utf-8' />
-    <title>University of Oregon Mapping</title>
+    <title>Bryce and Kasey's Appalachian Trail Hike</title>
     <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+      <!--    Bootstrap CSS for Glyphicon icons    -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
       <!--    The Mapbox JavaScript here in the <head> of the page    -->
       <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
       <!--    The Mapbox CSS here in the <head> of the page    -->
       <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.css' rel='stylesheet' />
       <style>
-        body { margin: 0; padding: 0; }
+        /* General Map Style */
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
         #map { position: absolute; top: 0; bottom: 0; width: 100%; }
-          .popup-image {
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    display: block;
-    border-radius: 8px;
- }
+
+        /* Controls the style of the images within the popup */
+        .popup-image {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* Controls the style of the svg markers that go with each image*/
         .marker {
             background-size: cover;
             width: 50px;
@@ -26,32 +33,319 @@
             border-radius: 50%;
             cursor: pointer;
         }
-
+        /* CSS controls for the popup text and background */
         .mapboxgl-popup-content {
             text-align: center;
             font-family: 'Arial, sans-serif';
+            font-size: 8px;
+            color: #F3E5AB;
+            text-shadow: 1px 1px 2px #000000;
             border-radius: 10px;
             padding: 15px;
-            /* box-shadow: 0 2px 10px rgba(0,0,0,0.3); */
             background-color: #213a12c0;
         }
+
+        /* Controls for h3 text size within popup */
+        .mapboxgl-popup-content h3 {
+            margin: 0;
+            font-size: 16px; 
+            padding: 10px;
+        }
+
+       /* The CSS for the "Fly/ Explore the Appalachian Trail" button  */
+        #fly {
+            display: block; 
+            position: relative; 
+            margin: 0px auto; 
+            width: 50%;
+            height: 60px;
+            padding: 10px;
+            border: none;
+            border-radius: 3px; 
+            font-size: 24px;
+            text-shadow: 2px 2px 4px #000000;
+            text-align: center;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+            color: #F3E5AB;
+            background: #213a12ff;
+        }
+
+       /*  style for paragraph tags used in the description panel (Welcome to the Appalachian Trail) */
+         p {
+          color: #F3E5AB;
+          text-shadow: 1px 1px 2px #000000;
+         }
+
+         /* style for heading level 4 tags */
+         h4 {
+          color: #F3E5AB;
+            margin-left: 10px;
+         }
+         /* Style of heading level 1 tags */
+         h1 {
+          font-family: 'Arial, sans-serif';
+          font-size: 20px;
+          color: #F3E5AB;
+          font-weight: bold;
+          text-shadow: 2px 2px 4px #000000;
+          padding-left: 10px;
+         }
+         /*  Style for the description panel (Welcome to the Appalachian Trail)*/
+         .descriptionPanel {
+             position: absolute;
+             bottom: 300px;
+             right: 20px;
+             z-index: 2;
+             width: 300px;
+             height: 40px;
+             background: #213a12c0;
+             transition: width 2s, height 2s, bottom 2s ease; /* Control the speed of toggling */
+             overflow: hidden;
+             border-radius: 7px;
+         }
+           /* style for items with the class "legendItem" (Used for each Forest/Parks legend row) */
+         /*
+             .legendItem lays out the legend row as a flex container,
+             keeping the color swatch and label aligned side-by-side.
+             The swatch is prevented from shrinking so all color boxes remain
+             the same size even when the row text wraps.
+         */
+         .legendItem {
+             margin: 0px;
+            padding: 0px;
+             display:flex;
+             align-items: center;
+             justify-content: flex-start;
+             gap: 5px;
+             line-height: 0;
+             min-height: 30px;
+         }
+
+         .legendItem > div:first-child {
+             flex-shrink: 0;
+         }
+
+
+         /* style for items with the class "layerDescription" controls that text of the Forest/Parks legend */
+         .layerDescription {
+               color: #F3E5AB;
+             padding-left: 0px;
+             line-height: 1;
+             font-size: 14px;
+         }        
+        
+
+         /* Style controls for Forest/parks legend panel */
+        .colorLegendPanel {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 2;
+            width: 520px;
+            background: #213a12c0;
+            border-radius: 7px;
+            transition: height 2s ease;
+            }
+
+        .colorLegendPanelHeader {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 15px;
+            cursor: pointer;
+        }
+      /* Controls the grid layout of the forest/parks legend items */
+        .colorLegendGrid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2px;
+            padding: 0 15px 15px;
+            align-items: stretch;
+            grid-auto-rows: minmax(40px, auto);
+        }
+
+        /* style for items with the class "chevron", the arrow icon that controls the Welcome and Forest/parks panel */
+         .chevron {
+             position: relative;
+             margin-left: 45%;
+              font-size: x-large;
+              color: white;
+              cursor: pointer;
+            }
+          
+        /* Photo Icon = svg Legend Container */
+        .svgLegendContainer {
+            font: 14px/20px Arial, sans-serif;
+            font-weight: 600;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+            border-radius: 3px;
+            width: 200px;
+            color: #F3E5AB;
+        }
+
+        .svgLegendContainer input[type='checkbox'] {
+            display: none;
+        }
+
+        .svgLegendContainer input[type='checkbox']:first-child + label {
+            border-radius: 3px 3px 0 0;
+        }
+
+        .svgLegendContainer label:last-child {
+            border-radius: 0 0 3px 3px;
+            border: none;
+        }
+
+        .svgLegendContainer input[type='checkbox'] + label {
+            background-color: #213a12c0;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 1px;
+            padding-left: 10px;
+            padding-right: 10px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+            margin: 0;
+            gap: 5px;
+            line-height: 1;
+        }
+
+        .svgLegendContainer input[type='checkbox'] + label:hover,
+        .svgLegendContainer input[type='checkbox']:checked + label {
+            background-color: #2d5a1a;
+        }
+
+        .svgLegendContainer input[type='checkbox']:checked + label:before {
+            content: '✔';
+            margin-right: 5px;
+            color: #F3E5AB;
+        }
+        /* Size of icons */
+        .svgLegendContainer label img {
+            width: 45px;
+            height: 45px;
+        }
+
+        
       </style>
   </head>
   <body>
-
+    <!-- Creation of divs for all CSS elements -->
     <div id='map'></div>
+    <br/>
+    <button id='fly'>Explore the Appalachian Trail</button>
+    <br/>
+    <!-- Welcome to the Appalachian Trail panel -->
+        <div class="descriptionPanel" id="descriptionPanel" style="height: 375px; width: 350px;">
+            <span onclick="togglePanel('descriptionPanel', 'glyph', state, '26px', '375px')" id="glyph" class="chevron glyphicon glyphicon-chevron-down"></span>
+            <span class="panelTitle"><h1 style="margin-left: 10px; margin-right: 10px;"> Welcome to the Appalachian Trail!</h1></span>
+            <hr/>
+         <p style="margin-left: 10px; margin-right: 10px;">
+               The Appalachian Trail spans nearly 2,200 miles, running across 13 states and over a hundred peaks from Georgia to Maine. On March 3rd 2021, Bryce DiNardo (Myself) and Kasey Drake set out on a semester off of a lifetime as they hiked the AT Northbound for a total of 162 days, averaging 18.5 miles a day when hiking. <br> Explore their thru-hiking journey through geotagged photos of hikers, mountaintops, trail signs, and views they captured along the way. <br> <u>Visit a few of their favorite and most iconic places by clicking <b> <i>"Explore the Appalachian Trail" </i> </b>  button at the top of the screen multiple times</u>. 
+        </p>
+        </div>
+        
+        <!-- National Forests and Parks Legend -->
+        <div class="colorLegendPanel" id="colorLegendPanel" style="height: auto;">
+            <div class="colorLegendPanelHeader" onclick="togglePanel('colorLegendPanel', 'colorGlyph', colorLegendState, '50px', 'auto')">
+                <span class="panelTitle"><h4>National Forests and Parks</h4></span>
+                <span id="colorGlyph" class="chevron glyphicon glyphicon-chevron-down"></span>
+            </div>
+            <div class="colorLegendGrid" id="colorLegendGrid">
+                <!-- Each legendItem row contains a fixed-size color box and the forest name text. -->
+                <div class="legendItem">
+                    <div style="width: 20px; height: 20px; background-color: #412722; margin-right: 5px;"></div>
+                    <span class="layerDescription">Chattahoochee-Oconee National Forest</span>
+                </div>
+                <div class="legendItem">
+                    <div style="width: 20px; height: 20px; background-color: #6b0f1a; margin-right: 5px;"></div>
+                    <span class="layerDescription">George Washington National Forests</span>
+                </div>
+                <div class="legendItem">
+                    <div style="width: 20px; height: 20px; background-color: #a51c28; margin-right: 5px;"></div>
+                    <span class="layerDescription">Nantahala National Forest</span>
+                </div>
+                <div class="legendItem">
+                    <div style="width: 20px; height: 20px; background-color: #5a7595; margin-right: 5px;"></div>
+                    <span class="layerDescription">Shenandoah National Park</span>
+                </div>
+                <div class="legendItem">
+                    <div style="width: 20px; height: 20px; background-color: #6fa00d; margin-right: 5px;"></div>
+                    <span class="layerDescription">Great Smoky Mountains National Park</span>
+                </div>
+                <div class="legendItem">
+                    <div style="width: 20px; height: 20px; background-color: #1b512d; margin-right: 5px;"></div>
+                    <span class="layerDescription">Green Mountain National Forests</span>
+                </div>
+                <div class="legendItem">
+                    <div style="width: 20px; height: 20px; background-color: #a51c28; margin-right: 5px;"></div>
+                    <span class="layerDescription">Pisgah National Forest</span>
+                </div>
+                <div class="legendItem">
+                    <div style="width: 20px; height: 20px; background-color: #579a28; margin-right: 5px;"></div>
+                    <span class="layerDescription">White Mountain National Forest</span>
+                </div>
+                <div class="legendItem">
+                    <div style="width: 20px; height: 20px; background-color: #f6d8ae; margin-right: 5px;"></div>
+                    <span class="layerDescription">Cherokee National Forest</span>
+                </div>
+                   
+            </div>
+        </div>
+
+        <!-- SVG Legend -->
+        <div class="svgLegendContainer" id="svgLegend">
+            <input type="checkbox" id="poi-Hiker" checked>
+            <label for="poi-Hiker"><img src="Markers/Hiker.svg" alt="Hiker"><span>Hiker Photos</span></label>
+            
+            <input type="checkbox" id="poi-Mountain" checked>
+            <label for="poi-Mountain"><img src="Markers/Mountain.svg" alt="Mountain"><span>Mountain Top Photos</span></label>
+            
+            <input type="checkbox" id="poi-Sign" checked>
+            <label for="poi-Sign"><img src="Markers/Sign.svg" alt="Sign"><span>Trail or Distance Photos</span></label>
+            
+            <input type="checkbox" id="poi-View" checked>
+            <label for="poi-View"><img src="Markers/View.svg" alt="View"><span>Beautiful Scenery Photos</span></label>
+        </div>
+
+
     <script>
-      mapboxgl.accessToken = 'pk.eyJ1IjoiYmRpbmFyZG8iLCJhIjoiY21uZjdjNjg3MDdkOTJzb2p4NDB3YXgzNiJ9.blvzI6YN8c5MaPDZ4Striw';
-      var map = new mapboxgl.Map({
+    mapboxgl.accessToken = 'pk.eyJ1IjoiYmRpbmFyZG8iLCJhIjoiY21uZjdjNjg3MDdkOTJzb2p4NDB3YXgzNiJ9.blvzI6YN8c5MaPDZ4Striw';
+    
+    // Set bounds to Eastern US 
+		var bounds = [
+		    [-90.0743285401741, 29.95740994235169], // Southwest coordinates
+		    [ -63.83372092372847, 49.7683041084351] // Northeast coordinates 
+		];
+        // Initialize the map with the specified style, center, zoom, and bounds
+    var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/bdinardo/cmpn4xln6001p01sseref9rkr',
-        center: [-78, 41],
+        attributionControl: false,
+        center: [-76, 41],
         maxZoom: 15,
         minZoom: 5,
-        zoom: 5
+        zoom: 5,
+        maxBounds: bounds
         });
+        // Attribution / custom text
+            map.addControl(new mapboxgl.AttributionControl({
+                customAttribution: ['Map design by Bryce DiNardo', 'All photos by Bryce DiNardo and Kasey Drake', 'CC BY-NC-ND 4.0', '<a href="Explore%20the%20Appalachian%20Trail%20Sources.pdf" target="_blank" rel="noopener">Data sources</a>']
+            }), 'bottom-right');
         
-       
+            // Map controls
+            map.addControl(new mapboxgl.NavigationControl({
+                showCompass: true,
+                showZoom: true,
+                visualizePitch: true
+            }), 'bottom-left');
+     
+            //Code for loading the GeoJSON data and creating markers and popups for each photo point on the map.   
         fetch('AT_photos.geojson')
             .then(response => response.json())
             .then(data => {
@@ -65,6 +359,7 @@
                         <h3>${feature.properties.caption}</h3>
                         <img 
                             src="${feature.properties.image}" 
+                            alt="${feature.properties.alt || ''}" // provide alt text if avaible, all fly to image have it
                             class="popup-image">
                     `);
 
@@ -74,15 +369,167 @@
                     markerElement.style.backgroundImage = `url('${feature.properties.marker}')`;
 
                     // Create marker
-                    new mapboxgl.Marker(markerElement)
+                    const marker = new mapboxgl.Marker(markerElement)
                         .setLngLat(feature.geometry.coordinates)
                         .setPopup(popup)
                         .addTo(map);
 
+                    // Extract marker type from the marker property (e.g., "Markers/Hiker.svg" -> "Hiker")
+                    const markerType = feature.properties.marker.split('/')[1].split('.')[0];
+
+                    // Track marker and popup for later control
+                    markers.push({ marker: marker, popup: popup, coords: feature.geometry.coordinates, type: markerType });
+                    
+                    // Group markers by type for toggle functionality
+                    if (markersByType[markerType]) {
+                        markersByType[markerType].push(marker);
+                    }
+
+                });
+
+
+                /* Variables for the spefic fly to markers and fly-to locations*/
+                var clickCounter = 0; // keep track of the current index in the fly-to sequence
+                var flyLocations = [[-84.24931388888889,34.55772777777778],[-83.80844166666667,35.452825000000004], [-80.0373,37.392963888888886], 
+                [ -77.74059166666667,39.32564444444445], [-76.66036111111111,40.28829444444444], [-73.15555555555557,42.74383888888889], [-71.303275,44.27049722222222],
+                [-68.92145555555555, 45.90445277777778]]; // Where the map will fly to (lng, lat)
+                // Arrays to hold created markers and the subset sequence we'll fly through
+                var markers = []; // each entry: { marker, popup, coords, type }
+                var flySequence = []; // indices into `markers` matching `flyLocations` order
+                var currentOpenPopup = null; // reference to the currently opened popup (if any)
+                var markersByType = { Hiker: [], Mountain: [], Sign: [], View: [] }; // Track markers by type for toggling
+
+                // Build the flySequence in the same order as `flyLocations` by matching coordinates to the markers we created. This allows us to fly to specific points in a defined order.
+                flySequence = flyLocations.map(loc => {
+                    for (let i = 0; i < markers.length; i++) {
+                        const c = markers[i].coords;
+                        if (c[0] === loc[0] && c[1] === loc[1]) return i;
+                    }
+                    console.warn('No marker found for fly-to location', loc);
+                    return null;
+                }).filter(i => i !== null);
+
+                // If there are no matches, leave flySequence empty and warn
+                if (flySequence.length === 0) console.warn('flySequence is empty — no matching markers for flyLocations');
+
+                // Add checkbox event listeners for toggling marker visibility
+                ['Hiker', 'Mountain', 'Sign', 'View'].forEach(type => {
+                    const checkbox = document.getElementById('poi-' + type);
+                    checkbox.addEventListener('change', function (e) {
+                        // Toggle visibility for all markers of this type
+                        markersByType[type].forEach(marker => {
+                            if (e.target.checked) {
+                                marker.addTo(map); // Show marker
+                            } else {
+                                marker.remove(); // Hide marker
+                            }
+                        });
+                    });
                 });
 
             });
 
+            // add a 'Listener' to the div with the ID 'fly', that's the button.
+        document.getElementById('fly').addEventListener('click', function () {
+            // If no sequence configured, bail out
+            if (!flySequence || flySequence.length === 0) {
+                console.warn('No fly sequence available');
+                return;
+            }
+
+            // If a popup is currently open, close it and advance to the next target
+            if (currentOpenPopup) {
+                currentOpenPopup.remove();
+                currentOpenPopup = null;
+                clickCounter = (clickCounter + 1) % flySequence.length;
+            }
+
+            // Fly to the current target in the sequence
+            const markerIndex = flySequence[clickCounter];
+            const target = markers[markerIndex];
+            if (!target) {
+                console.warn('Target marker not found for sequence index', clickCounter);
+                return;
+            }
+
+            // Control the fly to center area, creating enough room for text to not overlap button
+            console.log('flying to', target.coords);
+            map.flyTo({
+                center: [target.coords[0], target.coords[1] + 0.025], // add a small offset to the latitude for better popup visibility
+                zoom: 12
+            });
+
+            // When the fly animation finishes, open the popup for that marker
+            map.once('moveend', function () {
+                const popup = target.marker.getPopup ? target.marker.getPopup() : target.popup;
+                if (popup) {
+                    popup.setLngLat(target.coords).addTo(map);
+                    currentOpenPopup = popup;
+                }
+            });
+
+        });
+
+
+
+         
+            //  Interacting with the Welcome panel and the Forest/Parks legend panel.
+            //  `state` tracks whether the Welcome panel is expanded or collapsed.
+            //  `colorLegendState` tracks whether the forest legend is expanded or collapsed.
+            var state = { panelOpen: true };
+            var colorLegendState = { open: true };
+
+            // Reposition the description panel so it stays just above the legend.
+            // This keeps the two panels visually close and prevents overlap.
+            function updateDescriptionPosition() {
+                const panel = document.getElementById('colorLegendPanel');
+                const description = document.getElementById('descriptionPanel');
+                if (panel && description) {
+                    const legendHeight = panel.offsetHeight;
+                    // Place the description panel 30px above the current height of the legend.
+                    description.style.bottom = `${legendHeight + 30}px`;
+                }
+            }
+
+            // Generic toggle helper used by both panels.
+            // - panelId: id of the panel to collapse/expand
+            // - glyphId: id of the chevron icon to flip
+            // - state: open/closed state object for that panel
+            // - collapsedHeight: height used when panel is closed
+            // - expandedHeight: height used when panel is opened (auto uses scrollHeight)
+            function togglePanel(panelId, glyphId, state, collapsedHeight, expandedHeight) {
+                const panel = document.getElementById(panelId);
+                const glyph = document.getElementById(glyphId);
+                if (!panel || !glyph) return;
+                if (state.open) {
+                    panel.style.height = collapsedHeight;
+                    glyph.className = "chevron glyphicon glyphicon-chevron-up";
+                    state.open = false;
+                } else {
+                    const targetHeight = expandedHeight === 'auto'
+                        ? `${panel.scrollHeight}px`
+                        : expandedHeight;
+                    panel.style.height = targetHeight;
+                    glyph.className = "chevron glyphicon glyphicon-chevron-down";
+                    state.open = true;
+                }
+                // After either panel changes size, update the description panel position.
+                updateDescriptionPosition();
+            }
+
+            // Keep the description panel aligned if the legend finishes a height transition.
+            // This is especially important when the legend collapses/expands smoothly.
+            const colorLegendPanel = document.getElementById('colorLegendPanel');
+            if (colorLegendPanel) {
+                colorLegendPanel.addEventListener('transitionend', function (event) {
+                    if (event.propertyName === 'height') {
+                        updateDescriptionPosition();
+                    }
+                });
+            }
+
+            // Initialize the first position for the description panel.
+            updateDescriptionPosition();
     </script>
     </body>
 </html>

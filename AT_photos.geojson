@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_3192.jpeg",
-        "caption": "IMG_3192.jpeg",
+        "caption": "Selfie with Track Star, Kasey, Bryce, Roadkill, and Bender, entering Big Branch Wilderness",
         "marker": "Markers/Hiker.svg"
       },
       "geometry": {
@@ -20,7 +20,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_3851.jpeg",
-        "caption": "IMG_3851.jpeg",
+        "caption": "Kasey hiking through the Spruce-Fir forests of the Smoky Mountains",
         "marker": "Markers/Hiker.svg"
       },
       "geometry": {
@@ -35,7 +35,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_3931.jpeg",
-        "caption": "IMG_3931.jpeg",
+        "caption": "Selfie of Bryce and Kasey at the top of Big Bald",
         "marker": "Markers/Hiker.svg"
       },
       "geometry": {
@@ -50,8 +50,9 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4254.jpeg",
-        "caption": "IMG_4254.jpeg",
-        "marker": "Markers/Hiker.svg"
+        "caption": "Considered the unofficial start of the AT, the Approach Trail, Amicalola Falls. The Approach Trail is the 8-mile gateway to the start of the AT. Young and naive at 20 years old, Kasey and I were excited and nervous standing at the beginning of a journey that would last over five months.",
+        "marker": "Markers/Hiker.svg",
+        "alt": "Bryce and Kasey in front of a rock arch at the start of the AT"
       },
       "geometry": {
         "type": "Point",
@@ -65,8 +66,9 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4482.jpeg",
-        "caption": "IMG_4482.jpeg",
-        "marker": "Markers/Hiker.svg"
+        "caption": "Bryce taking a zero day at Hershey Park, PA! Zero days are days off from hiking that occur about every 10 days. While not all zero days were as much fun as going to an amusement park, they were always a great break from hiking. Zeros were the best you can feel when doing nothing for a whole day.",
+        "marker": "Markers/Hiker.svg",
+        "alt": "Bryce stands in front of statues of Hershey Park characters." 
       },
       "geometry": {
         "type": "Point",
@@ -80,7 +82,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4549.jpeg",
-        "caption": "IMG_4549.jpeg",
+        "caption": "Bryce filling a water bottle with beer under a bridge with Kasey and Bender",
         "marker": "Markers/Hiker.svg"
       },
       "geometry": {
@@ -95,14 +97,14 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4619.jpeg",
-        "caption": "IMG_4619.jpeg",
+        "caption": "Entering the Rollercoaster!",
         "marker": "Markers/Hiker.svg"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -77.95294166666667,
-          39.15980833333333
+          -77.96295787818192,
+          39.01740421025561
         ]
       }
     },
@@ -110,8 +112,9 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4637.jpeg",
-        "caption": "IMG_4637.jpeg",
-        "marker": "Markers/Hiker.svg"
+        "caption": "Bryce and Kasey at the ATC headquarters in Harpers Ferry. Finally out of the South after over 400 miles and over a month in Virginia, it felt so good to finally be in the latter half of our journey. At this point we are crushing miles, hiking 20 or more miles every day. A rate that would continue all the way to the White Mountains.",
+        "marker": "Markers/Hiker.svg",
+        "alt": "Bryce and Kasey in front of Appalachian Trail Conservancy"
       },
       "geometry": {
         "type": "Point",
@@ -125,14 +128,14 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4730.jpeg",
-        "caption": "IMG_4730.jpeg",
+        "caption": "Bryce shuffling through the Lemon Squeezer",
         "marker": "Markers/Hiker.svg"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -74.16719722222223,
-          41.29470555555555
+          -74.1332092214484,
+          41.25830147442619
         ]
       }
     },
@@ -140,14 +143,15 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4736.jpeg",
-        "caption": "IMG_4736.jpeg",
+        "caption": "Bryce next to the Dover Oak, the largest tree on the AT!",
         "marker": "Markers/Hiker.svg"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.61189166666666,
-          41.60261111111111
+          -73.6114054888895,
+          41.60303599193035
+ 
         ]
       }
     },
@@ -155,7 +159,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_5002.jpeg",
-        "caption": "IMG_5002.jpeg",
+        "caption": "Bryce and Kasey on the Presidential Range",
         "marker": "Markers/Hiker.svg"
       },
       "geometry": {
@@ -170,7 +174,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_5247.jpeg",
-        "caption": "IMG_5247.jpeg",
+        "caption": "Bryce and Kasey waiting to cross the Kennebec River",
         "marker": "Markers/Hiker.svg"
       },
       "geometry": {
@@ -185,7 +189,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4201.jpeg",
-        "caption": "IMG_4201.jpeg",
+        "caption": "Kasey on top of Dragon's Tooth",
         "marker": "Markers/Mountain.svg"
       },
       "geometry": {
@@ -200,8 +204,9 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4210.jpeg",
-        "caption": "IMG_4210.jpeg",
-        "marker": "Markers/Mountain.svg"
+        "caption": "Bryce sitting on McAfee Knob. Considered the most photographed location of the AT, McAfee Knob is an iconic milestone on the trail positioned at the second point of Virginia's Triple Crown between Dragon's Tooth and Tinker Cliffs. This section was Bryce's favorite section of the whole trail.",
+        "marker": "Markers/Mountain.svg",
+        "alt": "Bryce sitting on edge of cliff with rolling green hills in the background" 
       },
       "geometry": {
         "type": "Point",
@@ -215,7 +220,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4277.jpeg",
-        "caption": "IMG_4277.jpeg",
+        "caption": "Blood Mountain Shelter",
         "marker": "Markers/Mountain.svg"
       },
       "geometry": {
@@ -230,7 +235,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4289.jpeg",
-        "caption": "IMG_4289.jpeg",
+        "caption": "Georgia Viewpoint",
         "marker": "Markers/Mountain.svg"
       },
       "geometry": {
@@ -245,7 +250,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4659.jpeg",
-        "caption": "IMG_4659.jpeg",
+        "caption": "Bryce on the Pennsylvania Chimney Rocks",
         "marker": "Markers/Mountain.svg"
       },
       "geometry": {
@@ -260,7 +265,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4820.jpeg",
-        "caption": "IMG_4820.jpeg",
+        "caption": "Top of Killinton Peak, one of the many ski resorts we hiked over.",
         "marker": "Markers/Mountain.svg"
       },
       "geometry": {
@@ -275,7 +280,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4888.jpeg",
-        "caption": "IMG_4888.jpeg",
+        "caption": "1st White Mountain Summit, Mr. Moosilauke!",
         "marker": "Markers/Mountain.svg"
       },
       "geometry": {
@@ -290,8 +295,9 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_5049.jpeg",
-        "caption": "IMG_5049.jpeg",
-        "marker": "Markers/Mountain.svg"
+        "caption": "Mt. Washington Summit! Three-quarters of the way to the end, the White Mountain Range rises up to greatly reduce daily mileage from 20+ miles a day to 10-12 miles. While extremely beautiful and unique, the landscape is amazing during nice weather. However, the worst weather in the world has been recorded atop Mt. Washington, and storms form quickly and hit hard. We ended up hiking another three days on the exposed ridge in the White in pouring rain and 40+ mph winds. The worst weather we experienced on the trail.   ",
+        "marker": "Markers/Mountain.svg",
+        "alt": "Kasey in front of Mt Washington sign during foggy weather."
       },
       "geometry": {
         "type": "Point",
@@ -305,7 +311,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_5124.jpeg",
-        "caption": "IMG_5124.jpeg",
+        "caption": "Saddleback Mountain Summit",
         "marker": "Markers/Mountain.svg"
       },
       "geometry": {
@@ -320,7 +326,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_5223.jpeg",
-        "caption": "IMG_5223.jpeg",
+        "caption": "Bigelow Mountain Summit",
         "marker": "Markers/Mountain.svg"
       },
       "geometry": {
@@ -335,8 +341,9 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_5387.jpeg",
-        "caption": "IMG_5387.jpeg",
-        "marker": "Markers/Mountain.svg"
+        "caption": "After 162 days, 2,192.8 miles, we finally completed our thru hike of the Appalachian Trail. Possibly the greatest achievement of our lives to date. The end did not feel grand, but just like another day on the trail, and, most of all, it felt good to be done hiking. ",
+        "marker": "Markers/Mountain.svg",
+        "alt": "Bryce and Kasey on the summit of Mount Katahdin celebrating." 
       },
       "geometry": {
         "type": "Point",
@@ -350,7 +357,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_3723.jpeg",
-        "caption": "IMG_3723.jpeg",
+        "caption": "100 miles in!",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -365,8 +372,9 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_3810.jpeg",
-        "caption": "IMG_3810.jpeg",
-        "marker": "Markers/Sign.svg"
+        "caption": "Entering the Great Smoky Mountains was entering the first big test of the journey. Less than 200 miles in, we summited the trail's highest peaks and faced freezing conditions for multiple days. It was also some of the most beautiful hiking of the whole trail.",
+        "marker": "Markers/Sign.svg",
+        "alt": "Bryce in front of sign for entering Great Smoky Mountain National Park."
       },
       "geometry": {
         "type": "Point",
@@ -380,7 +388,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_3866.jpeg",
-        "caption": "IMG_3866.jpeg",
+        "caption": "200 miles in",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -395,7 +403,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_3992.jpeg",
-        "caption": "IMG_3992.jpeg",
+        "caption": "North Carolina Complete!",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -410,7 +418,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4093.jpeg",
-        "caption": "IMG_4093.jpeg",
+        "caption": "These feet walked 500 miles",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -425,7 +433,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4115.jpeg",
-        "caption": "IMG_4115.jpeg",
+        "caption": "A quarter of the way there!",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -440,7 +448,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4129.jpeg",
-        "caption": "IMG_4129.jpeg",
+        "caption": "800 miles done!",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -455,7 +463,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4270.jpeg",
-        "caption": "IMG_4270.jpeg",
+        "caption": "900 miles done!",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -470,7 +478,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4308.jpeg",
-        "caption": "IMG_4308.jpeg",
+        "caption": "1000 miles down!",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -485,7 +493,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4394.jpeg",
-        "caption": "IMG_4394.jpeg",
+        "caption": "1100 mile mark",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -500,14 +508,14 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4405.jpeg",
-        "caption": "IMG_4405.jpeg",
+        "caption": "300 miles done",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -82.81063055555555,
-          36.16478611111111
+          -82.71520877742215,
+          36.028631764476145
         ]
       }
     },
@@ -515,7 +523,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4488.jpeg",
-        "caption": "IMG_4488.jpeg",
+        "caption": "1200 miles!",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -530,7 +538,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4566.jpeg",
-        "caption": "IMG_4566.jpeg",
+        "caption": "Hello New York, Goodbye New Jersey",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -545,8 +553,9 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4820.jpeg",
-        "caption": "IMG_4820.jpeg",
-        "marker": "Markers/Sign.svg"
+        "caption": "Welcome to Vermont! Bryce's home state! Getting to Vermont was a big milestone. Finally out hiking through green spaces surrounded by urbanization and back into the forest. It was also cool hiking the Long Trail, the long-distance trail that spans all of Vermont, a trail Bryce had grown up backpacking on. It was really a full circle moment for him as a hiker.",
+        "marker": "Markers/Sign.svg",
+        "alt": "Bryce in front of trail sign entering Vermont."
       },
       "geometry": {
         "type": "Point",
@@ -560,7 +569,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4876.jpeg",
-        "caption": "IMG_4876.jpeg",
+        "caption": "New Hampshire State Line",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -575,7 +584,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_5100.jpeg",
-        "caption": "IMG_5100.jpeg",
+        "caption": "Entering our last state",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -590,7 +599,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_5134.jpeg",
-        "caption": "IMG_5134.jpeg",
+        "caption": "2000 miles!",
         "marker": "Markers/Sign.svg"
       },
       "geometry": {
@@ -605,7 +614,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_3841.jpeg",
-        "caption": "IMG_3841.jpeg",
+        "caption": "Foggy morning deep in the Smoky Mountains",
         "marker": "Markers/View.svg"
       },
       "geometry": {
@@ -620,7 +629,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_3853.jpeg",
-        "caption": "IMG_3853.jpeg",
+        "caption": "View of trail in Great Smoky Mountain National Park",
         "marker": "Markers/View.svg"
       },
       "geometry": {
@@ -635,7 +644,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4204.jpeg",
-        "caption": "IMG_4204.jpeg",
+        "caption": "Sunny view of field by Beckner Gap",
         "marker": "Markers/View.svg"
       },
       "geometry": {
@@ -650,7 +659,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4221.jpeg",
-        "caption": "IMG_4221.jpeg",
+        "caption": "View of Carvins Cove Natural Reserve",
         "marker": "Markers/View.svg"
       },
       "geometry": {
@@ -665,7 +674,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4228.jpeg",
-        "caption": "IMG_4228.jpeg",
+        "caption": "View of Blue Ridge Mountains!",
         "marker": "Markers/View.svg"
       },
       "geometry": {
@@ -680,7 +689,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4322.jpeg",
-        "caption": "IMG_4322.jpeg",
+        "caption": "Rapids on the Shenandoah River in Harpers Ferry",
         "marker": "Markers/View.svg"
       },
       "geometry": {
@@ -695,7 +704,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4518.jpeg",
-        "caption": "IMG_4518.jpeg",
+        "caption": "Lehigh Gap. Like the only good view in PA",
         "marker": "Markers/View.svg"
       },
       "geometry": {
@@ -710,7 +719,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4533.jpeg",
-        "caption": "IMG_4533.jpeg",
+        "caption": "Large Pile of Rocks, no really that's its name",
         "marker": "Markers/View.svg"
       },
       "geometry": {
@@ -725,7 +734,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4546.jpeg",
-        "caption": "IMG_4546.jpeg",
+        "caption": "High Point, NJ",
         "marker": "Markers/View.svg"
       },
       "geometry": {
@@ -740,7 +749,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4611.jpeg",
-        "caption": "IMG_4611.jpeg",
+        "caption": "Kasey walking over the Hudson",
         "marker": "Markers/View.svg"
       },
       "geometry": {
@@ -755,14 +764,14 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4784.jpeg",
-        "caption": "IMG_4784.jpeg",
+        "caption": "Bryce overlooking the land from Lions Head ",
         "marker": "Markers/View.svg"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -73.40967500000001,
-          42.01333611111111
+          -73.4482798958632,
+          42.01014801316185
         ]
       }
     },
@@ -770,7 +779,7 @@
       "type": "Feature",
       "properties": {
         "image": "photos/IMG_4844.jpeg",
-        "caption": "IMG_4844.jpeg",
+        "caption": "Views over the end of the Smoky Mountains",
         "marker": "Markers/View.svg"
       },
       "geometry": {
