@@ -319,8 +319,8 @@
 
         // Set bounds to Eastern US before creating the map so maxBounds works correctly.
         var bounds = [
-            [-92, 30], // Southwest coordinates
-            [-60, 52] // Northeast coordinates
+            [-99, 27], // Southwest coordinates 
+            [-50, 51.5] // Northeast coordinates 
         ];
 
         var map = new mapboxgl.Map({
@@ -331,7 +331,7 @@
             maxZoom: 15,
             minZoom: 5,
             zoom: 5,
-           // maxBounds: bounds
+           maxBounds: bounds
         });
 
         // Attribution 
